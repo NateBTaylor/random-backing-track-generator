@@ -17,7 +17,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
 }
 
 /* Container Styling */
@@ -118,6 +117,14 @@ strong {
 
     p {
         font-size: 1em;
+    }
+
+    body {
+        justify-content:start;
+    }
+
+    .chord-generator {
+        margin-top:2rem;
     }
 }
   
