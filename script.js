@@ -233,12 +233,14 @@ function playTrack() {
 
     mediaRecorder.onstop = () => {
         // Create a Blob from the recorded chunks
-        const blob = new Blob(recordedChunks, {type : "audio/mpeg; codecs=opus"})
+        const blob = new Blob(recordedChunks, {type : "audio/webm"})
         const audioUrl = URL.createObjectURL(blob);
 
         // Set the recorded audio to the audio tag
         chordPlayback.src = audioUrl;
-        // chordPlayback.play();
+        chordPlayback.addEventListener("loadedmetadata", () => {
+            chordPlayback.play();
+        });
 
         // Reset UI
         playSoundBtn.innerText = "Record Chords";
