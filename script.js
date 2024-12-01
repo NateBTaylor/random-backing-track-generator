@@ -233,7 +233,7 @@ function playTrack() {
 
     mediaRecorder.onstop = () => {
         // Create a Blob from the recorded chunks
-        const blob = new Blob(recordedChunks, {type : "audio/webm"})
+        const blob = new Blob(recordedChunks, { type: "audio/mp3" });
         const audioUrl = URL.createObjectURL(blob);
 
         // Set the recorded audio to the audio tag
