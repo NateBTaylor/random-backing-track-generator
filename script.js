@@ -238,9 +238,7 @@ function playTrack() {
 
         // Set the recorded audio to the audio tag
         chordPlayback.src = audioUrl;
-        chordPlayback.addEventListener("loadedmetadata", () => {
-            chordPlayback.play();
-        });
+        chordPlayback.play();
 
         // Reset UI
         playSoundBtn.innerText = "Record Chords";
